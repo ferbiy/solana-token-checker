@@ -92,7 +92,7 @@ export function RPCInput({
           <Button
             onClick={resetRpc}
             variant="outline"
-            className="border-zinc-700 hover:bg-zinc-800"
+            className="border-zinc-700 hover:bg-zinc-800 text-red-500"
             disabled={loading || isInitializing}
           >
             Reset

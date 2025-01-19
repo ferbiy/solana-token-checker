@@ -53,7 +53,7 @@ export function RPCInput({
     <div>
       <div className="flex justify-between items-baseline mb-2">
         <div className="flex items-center gap-2">
-          <label className="block text-sm font-medium">RPC Endpoint</label>
+          <label className="block text-sm font-medium text-white">RPC Endpoint</label>
           <a
             href="https://account.getblock.io/sign-in?ref=NjQ0MzgyZTEtMTg5YS01MjBkLWIxOWMtMTUzZWMwYjI0NWEy"
             target="_blank"

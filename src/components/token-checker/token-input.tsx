@@ -16,7 +16,9 @@ export function TokenInput({
 }: TokenInputProps) {
   return (
     <div>
-      <label className="block text-sm font-medium mb-2">Token Address</label>
+      <label className="block text-sm font-medium mb-2 text-white">
+        Token Address
+      </label>
       {isInitializing ? (
         <Skeleton className="h-9 w-full" />
       ) : (

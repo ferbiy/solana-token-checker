@@ -22,7 +22,9 @@ export function WalletsInput({
   return (
     <div>
       <div className="flex justify-between items-baseline mb-2">
-        <label className="block text-sm font-medium">Wallet Addresses</label>
+        <label className="block text-sm font-medium text-white">
+          Wallet Addresses
+        </label>
         {isWalletsModified && (
           <Button
             onClick={onSaveWallets}

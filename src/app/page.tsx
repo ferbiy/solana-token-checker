@@ -277,10 +277,20 @@ export default function Home() {
                 target="_blank"
                 className="hover:scale-110 transition-transform"
               />
+
               <SocialIcon
                 url="https://t.me/+Pt8MwHxgf8QwMGMy"
                 network="telegram"
                 bgColor="#0088cc"
+                style={{ height: 35, width: 35 }}
+                target="_blank"
+                className="hover:scale-110 transition-transform"
+              />
+
+              <SocialIcon
+                url="https://github.com/ferbiy/solana-token-checker"
+                network="github"
+                bgColor="#333"
                 style={{ height: 35, width: 35 }}
                 target="_blank"
                 className="hover:scale-110 transition-transform"

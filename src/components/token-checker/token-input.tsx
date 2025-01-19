@@ -24,7 +24,7 @@ export function TokenInput({
           value={tokenAddress}
           onChange={(e) => onTokenAddressChange(e.target.value)}
           placeholder="Enter token address"
-          className="bg-zinc-900 border-zinc-700"
+          className="bg-zinc-900 border-zinc-700 text-white placeholder:text-zinc-500"
           disabled={loading}
         />
       )}

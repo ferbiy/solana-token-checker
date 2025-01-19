@@ -321,7 +321,7 @@ export default function Home() {
                   type="checkbox"
                   checked={checkSol}
                   onChange={(e) => setCheckSol(e.target.checked)}
-                  className="rounded border-zinc-700 bg-zinc-900"
+                  className="rounded border-zinc-700 bg-zinc-900 text-emerald-500"
                   disabled={loading}
                 />
                 <span className="text-white">Check SOL Balance</span>
@@ -354,7 +354,7 @@ export default function Home() {
                   value={minValue}
                   onChange={(e) => setMinValue(e.target.value)}
                   placeholder="0"
-                  className="bg-zinc-900/80 border-zinc-700"
+                  className="bg-zinc-900/80 border-zinc-700 text-white placeholder:text-zinc-500"
                   disabled={loading}
                 />
               </div>
@@ -363,7 +363,7 @@ export default function Home() {
                   type="checkbox"
                   checked={isTokenValue}
                   onChange={(e) => setIsTokenValue(e.target.checked)}
-                  className="rounded border-zinc-700 bg-zinc-900"
+                  className="rounded border-zinc-700 bg-zinc-900 text-emerald-500"
                   disabled={loading}
                 />
                 <span className="text-sm text-white">
@@ -380,7 +380,7 @@ export default function Home() {
                 (!checkSol && !tokenAddress) ||
                 isInitializing
               }
-              className="w-full bg-zinc-100 text-black hover:bg-zinc-200 disabled:bg-zinc-800 disabled:text-zinc-500"
+              className="w-full bg-zinc-100 text-black hover:bg-zinc-200 disabled:bg-zinc-800 disabled:text-zinc-400"
             >
               {isInitializing
                 ? "Loading..."

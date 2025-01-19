@@ -75,7 +75,7 @@ export function RPCInput({
             value={rpc}
             onChange={(e) => handleRpcChange(e.target.value)}
             placeholder="Enter RPC URL"
-            className="bg-zinc-900 border-zinc-700"
+            className="bg-zinc-900 border-zinc-700 text-white placeholder:text-zinc-500"
             disabled={loading}
           />
         )}

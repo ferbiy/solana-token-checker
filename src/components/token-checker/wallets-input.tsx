@@ -41,7 +41,7 @@ export function WalletsInput({
           value={wallets}
           onChange={(e) => onWalletsChange(e.target.value)}
           placeholder="Enter wallet addresses (one per line or separated by comma)"
-          className="bg-zinc-900 border-zinc-700 h-32"
+          className="bg-zinc-900 border-zinc-700 h-32 text-white placeholder:text-zinc-500"
           disabled={loading}
         />
       )}

@@ -3,8 +3,15 @@
 import { useState, useEffect } from "react";
 import { Connection, PublicKey, LAMPORTS_PER_SOL } from "@solana/web3.js";
 import { DEFAULT_RPC } from "@/lib/utils";
+import { PRESET_TOKENS } from "@/lib/constants";
 import { WalletResultItem } from "@/components/token-checker/wallet-result-item";
-import { ResultItem, TokenListItem, TokenMetadata } from "@/types/token";
+import { TokenPresets } from "@/components/token-checker/token-presets";
+import {
+  ResultItem,
+  TokenListItem,
+  TokenMetadata,
+  PresetToken,
+} from "@/types/token";
 import { SocialIcon } from "react-social-icons";
 import {
   Button,
@@ -247,6 +254,10 @@ export default function Home() {
     return value >= parseFloat(minValue || "0");
   });
 
+  const handleTokenSelect = (token: PresetToken) => {
+    setTokenAddress(token.address);
+  };
+
   return (
     <div
       className="min-h-screen bg-cover bg-center bg-fixed"
@@ -260,14 +271,14 @@ export default function Home() {
             </h1>
             <div className="flex items-center gap-4">
               <SocialIcon
-                url="https://twitter.com/your_twitter_handle"
+                url="https://x.com/akoyrk"
                 bgColor="#1DA1F2"
                 style={{ height: 35, width: 35 }}
                 target="_blank"
                 className="hover:scale-110 transition-transform"
               />
               <SocialIcon
-                url="https://t.me/your_telegram_handle"
+                url="https://t.me/+Pt8MwHxgf8QwMGMy"
                 network="telegram"
                 bgColor="#0088cc"
                 style={{ height: 35, width: 35 }}
@@ -308,12 +319,19 @@ export default function Home() {
             </div>
 
             {!checkSol && (
-              <TokenInput
-                tokenAddress={tokenAddress}
-                onTokenAddressChange={setTokenAddress}
-                isInitializing={isInitializing}
-                loading={loading}
-              />
+              <>
+                <TokenPresets
+                  presetTokens={PRESET_TOKENS}
+                  selectedAddress={tokenAddress}
+                  onSelect={handleTokenSelect}
+                />
+                <TokenInput
+                  tokenAddress={tokenAddress}
+                  onTokenAddressChange={setTokenAddress}
+                  isInitializing={isInitializing}
+                  loading={loading}
+                />
+              </>
             )}
 
             <div className="flex items-center gap-4">

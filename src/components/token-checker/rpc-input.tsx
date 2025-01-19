@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -22,13 +22,16 @@ export function RPCInput({
 
   const handleRpcChange = (value: string) => {
     setRpc(value);
-    setIsRpcModified(value !== DEFAULT_RPC);
+    // Only show save button if the current value is different from both DEFAULT_RPC and saved RPC
+    const savedRpc = localStorage.getItem("rpc");
+    setIsRpcModified(value !== DEFAULT_RPC && value !== savedRpc);
     onRpcChange(value);
   };
 
   const saveRpc = () => {
     localStorage.setItem("rpc", rpc);
     setIsRpcModified(false);
+    onRpcChange(rpc);
   };
 
   const resetRpc = () => {
@@ -38,6 +41,13 @@ export function RPCInput({
     localStorage.removeItem("rpc");
     onRpcChange(newRpc);
   };
+
+  useEffect(() => {
+    setRpc(initialRpc);
+    // Only show save button if the current value is different from both DEFAULT_RPC and saved RPC
+    const savedRpc = localStorage.getItem("rpc");
+    setIsRpcModified(initialRpc !== DEFAULT_RPC && initialRpc !== savedRpc);
+  }, [initialRpc]);
 
   return (
     <div>

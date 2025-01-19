@@ -19,3 +19,10 @@ export interface ResultItem {
   usdValue?: number;
   tokenMetadata?: TokenMetadata;
 }
+
+export interface PresetToken {
+  address: string;
+  symbol: string;
+  logoUrl: string;
+  name: string;
+}

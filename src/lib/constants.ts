@@ -2,6 +2,12 @@ import { PresetToken } from "@/types/token";
 
 export const PRESET_TOKENS: PresetToken[] = [
   {
+    address: "jE7q5qieKaUXmyhuWTXmGVtpeBoKtgbMbtks7LKogme",
+    symbol: "OGME",
+    name: "OGME",
+    logoUrl: "/tokens/ogme.jpg",
+  },
+  {
     address: "M3M3pSFptfpZYnWNUgAbyWzKKgPo5d1eWmX6tbiSF2K",
     symbol: "M3M3",
     name: "M3M3",
